@@ -1,0 +1,108 @@
+:root {
+    --background-color: #282C34;
+    --text-color: #ABB2BF;
+    --button-background: #61AFEF;
+    --button-text: #FFFFFF;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.chat-box {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.line-number {
+    color: #4B5263;
+    width: 30px;
+    text-align: center;
+    padding: 5px;
+}
+
+.line-number.self {
+    color: #EF596F; /* Red color for user's messages */
+}
+
+.line-number.other {
+    color: #61AFEF; /* Blue color for other person's messages */
+}
+
+.message-content {
+    flex: 1;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4B5263;
+}
+
+.input-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #4B5263;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    background-color: #3E4451;
+    color: #ABB2BF;
+    resize: none;
+}
+
+.send-button {
+    background-color: #61AFEF;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.send-button:hover {
+    background-color: #3E90F3;
+}
+
+.color-buttons {
+    margin-top: 20px;
+}
+
+.color-button {
+    background-color: #61AFEF;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.color-button:hover {
+    background-color: #3E90F3;
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box" id="chatBox">
+            <div class="message self">
+                <div class="line-number self">1</div>
+                <div class="message-content">Hello, how are you?</div>
+            </div>
+            <div class="message">
+                <div class="line-number other">1</div>
+                <div class="message-content">I'm good, thank you!</div>
+            </div>
+            <div class="message self">
+                <div class="line-number self">2</div>
+                <div class="message-content">What's up?</div>
+            </div>
+        </div>
+        <div class="input-container">
+            <textarea class="message-input" placeholder="Type your message..."></textarea>
+            <button class="send-button">Send</button>
+        </div>
+        <div class="color-buttons">
+            <button class="color-button" id="monokai">Monokai</button>
+            <button class="color-button" id="solarized">Solarized</button>
+            <button class="color-button" id="gruvbox">Gruvbox</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
