@@ -17,34 +17,29 @@ body {
     display: flex;
     max-width: 1200px;
     margin: 20px auto;
+    border-left: 1px solid #4B5263; /* Add border to the left side of the container */
+    border-right: 1px solid #4B5263; /* Add border to the right side of the container */
 }
-
 
 .contact {
     flex: 1;
-    padding-right: 20px; /* Add some padding to the right side of the sidebar */
-    margin-right: 10px; /* Add margin to separate the sidebar from the main content */
-    border-right: 1px solid #4B5263; /* Add border to the right side of the sidebar */
-
-    
+    padding-right: 20px;
+    margin-right: 10px;
+    border-right: 1px solid #4B5263;
 }
 
 .main {
-    flex: 3; /* Adjust this value according to your layout needs */
-    padding-left: 20px; /* Add some padding to the left side of the main content */
+    flex: 3;
+    padding-left: 20px;
     display: flex;
-    flex-direction: column; /* Align children vertically */
+    flex-direction: column;
 }
-
 
 .input-container {
     display: flex;
     margin-top: 20px;
-    width: 100%; /* Ensure the input container spans the full width */
+    width: 100%;
 }
-
-
-
 
 .message-content {
     display: flex;
@@ -52,27 +47,28 @@ body {
     color: var(--text-color);
     padding: 10px;
     border-radius: 5px;
-    align-items: center; /* Align items vertically */
+    align-items: center;
 }
 
 .line-number {
     color: #4B5263;
     padding: 5px;
-    margin-right: 10px; /* Add some space between line number and text */
+    margin-right: 10px;
 }
 
 .line-number.self {
-    color: #EF596F; /* Red color for user's messages */
+    color: #EF596F;
 }
 
 .line-number.other {
-    color: #61AFEF; /* Blue color for other person's messages */
+    color: #61AFEF;
 }
 
 .text {
-    flex: 1; /* Fill remaining space */
-    padding-left: 10px; /* Add padding to separate text from border */
-    border-left: 1px solid #4B5263; /* Add border to the left side of the text */
+    flex: 1;
+    padding-left: 10px;
+    border-left: 1px solid #4B5263;
+    height: 100%;
 }
 
 .message-input {
@@ -122,5 +118,4 @@ body {
 .color-button:hover {
     background-color: #3E90F3;
 }
-
 
