@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     background-color: var(--background-color);
     padding: 20px;
-    border-radius: 5px;
+    border-racenter;;
     border: 1px solid #4B5263;
     margin-bottom: 20px; /* Add some spacing between contacts */
 }
@@ -90,6 +90,7 @@ body {
     background-color: var(--background-color);
     color: #ABB2BF;
     resize: none;
+    margin-left: 40px;
 }
 
 .send-button {
@@ -109,6 +110,8 @@ body {
 
 .color-buttons {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .color-button {
