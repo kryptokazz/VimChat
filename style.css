@@ -19,17 +19,32 @@ body {
     margin: 20px auto;
 }
 
-.sidebar {
+
+.contact {
     flex: 1;
     padding-right: 20px; /* Add some padding to the right side of the sidebar */
     margin-right: 10px; /* Add margin to separate the sidebar from the main content */
     border-right: 1px solid #4B5263; /* Add border to the right side of the sidebar */
+
+    
 }
 
 .main {
     flex: 3; /* Adjust this value according to your layout needs */
     padding-left: 20px; /* Add some padding to the left side of the main content */
+    display: flex;
+    flex-direction: column; /* Align children vertically */
 }
+
+
+.input-container {
+    display: flex;
+    margin-top: 20px;
+    width: 100%; /* Ensure the input container spans the full width */
+}
+
+
+
 
 .message-content {
     display: flex;
@@ -60,15 +75,6 @@ body {
     border-left: 1px solid #4B5263; /* Add border to the left side of the text */
 }
 
-
-
-
-.input-container {
-    display: flex;
-    margin-top: 20px;
-
-}
-
 .message-input {
     flex: 1;
     padding: 10px;
@@ -79,7 +85,6 @@ body {
     background-color: var(--background-color);
     color: #ABB2BF;
     resize: none;
-    margin-left: 40px;
 }
 
 .send-button {
