@@ -21,40 +21,29 @@ body {
 
 .sidebar {
     flex: 1;
-    padding-right: 20px; /* Add some spacing between sidebar and main content */
-    margin-right: 20px; /* Add some spacing between sidebar and main content */
+    padding-right: 20px; /* Add some padding to the right side of the sidebar */
+    margin-right: 10px; /* Add margin to separate the sidebar from the main content */
+    border-right: 1px solid #4B5263; /* Add border to the right side of the sidebar */
 }
 
 .main {
     flex: 3; /* Adjust this value according to your layout needs */
+    padding-left: 20px; /* Add some padding to the left side of the main content */
 }
 
-.contact {
+.message-content {
     display: flex;
-    flex-direction: column;
     background-color: var(--background-color);
-    padding: 20px;
-    border-racenter;;
-    border: 1px solid #4B5263;
-    margin-bottom: 20px; /* Add some spacing between contacts */
-}
-
-.chat-box {
-    max-height: 400px;
-    overflow-y: auto;
-}
-
-.message {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center; /* Align items vertically */
 }
 
 .line-number {
     color: #4B5263;
-    width: 30px;
-    text-align: center;
     padding: 5px;
+    margin-right: 10px; /* Add some space between line number and text */
 }
 
 .line-number.self {
@@ -65,14 +54,14 @@ body {
     color: #61AFEF; /* Blue color for other person's messages */
 }
 
-.message-content {
-    flex: 1;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #4B5263;
+.text {
+    flex: 1; /* Fill remaining space */
+    padding-left: 10px; /* Add padding to separate text from border */
+    border-left: 1px solid #4B5263; /* Add border to the left side of the text */
 }
+
+
+
 
 .input-container {
     display: flex;
@@ -128,4 +117,5 @@ body {
 .color-button:hover {
     background-color: #3E90F3;
 }
+
 
