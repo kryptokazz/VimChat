@@ -20,4 +20,5 @@ VimChat is not just another chat application. It's a unique experience designed 
 
 - **Inspired by Vim**: VimChat draws inspiration from the legendary Vim editor, renowned for its speed, power, and flexibility. If you're a Vim enthusiast, VimChat is your natural choice.
 
-![image](https://github.com/kryptokazz/VimChat/assets/92654627/051b6821-7428-4df6-b252-3305e92e89e8)
+![image](https://github.com/kryptokazz/VimChat/assets/92654627/32c941ab-b92e-44f5-9015-09ecde8ec90d)
+
