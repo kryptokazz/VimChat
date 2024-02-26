@@ -16,10 +16,14 @@ body {
 
 .container {
     display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    height: 100%; /* Set height to 100% of the viewport height */
+    margin: 10px; /* Adjust the margin as needed */
+    padding: 5px; /* Add padding around the container */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-radius: 10px; /* Round the corners */
 }
+
+
 
 .contact {
     flex: 1;
