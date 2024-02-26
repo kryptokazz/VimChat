@@ -19,3 +19,13 @@ document.getElementById('gruvbox').addEventListener('click', function() {
     document.documentElement.style.setProperty('--button-text', '#282828');
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const johnDoeHeader = document.getElementById('johnDoeHeader');
+    const johnDoeDetails = document.getElementById('johnDoeDetails');
+
+    johnDoeHeader.addEventListener('click', function() {
+        johnDoeDetails.classList.toggle('expanded');
+    });
+});
+

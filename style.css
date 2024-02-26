@@ -13,20 +13,35 @@ body {
     color: var(--text-color);
 }
 
+
 .container {
     display: flex;
     max-width: 1200px;
     margin: 20px auto;
-    border-left: 1px solid #4B5263; /* Add border to the left side of the container */
-    border-right: 1px solid #4B5263; /* Add border to the right side of the container */
+    height: 100%; /* Set height to 100% of the viewport height */
 }
 
 .contact {
     flex: 1;
-    padding-right: 20px;
+    padding: 20px;
     margin-right: 10px;
+    border-left: 1px solid #4B5263;
     border-right: 1px solid #4B5263;
+    height: 100svh; /* Set height to 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
 }
+
+.contact-details {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.contact-details.expanded {
+    display: block;
+}
+
+
 
 .main {
     flex: 3;
@@ -118,4 +133,5 @@ body {
 .color-button:hover {
     background-color: #3E90F3;
 }
+
 
