@@ -23,6 +23,55 @@ body {
     border-radius: 10px; /* Round the corners */
 }
 
+/* Add these styles to your existing style.css file */
+
+/* Input field */
+#newContactName {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4B5263;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Button */
+#addContactButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #61AFEF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addContactButton:hover {
+    background-color: #3E90F3;
+}
+
+/* Hide the add contact container initially */
+.hidden {
+    display: none;
+}
+
+/* Style for the plus button */
+.plus-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #61AFEF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+
 
 
 .contact {
@@ -38,7 +87,6 @@ body {
 
 .contact-details {
     display: none;
-    transition: all 0.3s ease;
 }
 
 .contact-details.expanded {

@@ -19,19 +19,11 @@ document.getElementById('gruvbox').addEventListener('click', function() {
     document.documentElement.style.setProperty('--button-text', '#282828');
 });
 
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const contactDetails = document.getElementById('contactDetails');
-    const contactsHeader = document.getElementById('contactsHeader');
-    const newContactNameInput = document.getElementById('newContactName');
-    const addContactButton = document.getElementById('addContactButton');
-     const addContactContainer = document.getElementById('addContactContainer');
-    const revealAddContactButton = document.getElementById('revealAddContact');
-
-
-         // Event listener for revealing the add contact input field and button
-    revealAddContactButton.addEventListener('click', function() {
-        addContactContainer.classList.toggle('hidden');
-    });
 
     // Function to add a new contact name
     function addContactName(name) {
@@ -47,19 +39,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // Example usage of addContactName function
     addContactName('Jane Doe');
     addContactName('Alice Smith');
-
-    // Toggle visibility of contact details when clicking on "Contacts" header
-    contactsHeader.addEventListener('click', function() {
-        contactDetails.classList.toggle('expanded');
-    });
-
-    // Event listener to add a new contact when the button is clicked
-    addContactButton.addEventListener('click', function() {
-        const newContactName = newContactNameInput.value.trim(); // Get input value and remove leading/trailing spaces
-        if (newContactName !== '') {
-            addContactName(newContactName);
-            newContactNameInput.value = ''; // Clear input field after adding the contact
-        }
-    });
 });
 
