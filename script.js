@@ -1,65 +1,63 @@
-document.getElementById('monokai').addEventListener('click', function() {
-    document.documentElement.style.setProperty('--background-color', '#272822');
-    document.documentElement.style.setProperty('--text-color', '#F8F8F2');
-    document.documentElement.style.setProperty('--button-background', '#66D9EF');
-    document.documentElement.style.setProperty('--button-text', '#272822');
-});
-
-document.getElementById('solarized').addEventListener('click', function() {
-    document.documentElement.style.setProperty('--background-color', '#fdf6e3');
-    document.documentElement.style.setProperty('--text-color', '#002b36');
-    document.documentElement.style.setProperty('--button-background', '#268bd2');
-    document.documentElement.style.setProperty('--button-text', '#fdf6e3');
-});
-
-document.getElementById('gruvbox').addEventListener('click', function() {
-    document.documentElement.style.setProperty('--background-color', '#282828');
-    document.documentElement.style.setProperty('--text-color', '#ebdbb2');
-    document.documentElement.style.setProperty('--button-background', '#83a598');
-    document.documentElement.style.setProperty('--button-text', '#282828');
-});
-
 document.addEventListener("DOMContentLoaded", function() {
     const contactDetails = document.getElementById('contactDetails');
     const contactsHeader = document.getElementById('contactsHeader');
     const newContactNameInput = document.getElementById('newContactName');
     const addContactButton = document.getElementById('addContactButton');
-     const addContactContainer = document.getElementById('addContactContainer');
+    const addContactContainer = document.getElementById('addContactContainer');
     const revealAddContactButton = document.getElementById('revealAddContact');
 
+    revealAddContactButton.addEventListener('click', toggleAddContactContainer);
+    contactsHeader.addEventListener('click', toggleContactDetails);
+    addContactButton.addEventListener('click', addNewContact);
 
-         // Event listener for revealing the add contact input field and button
-    revealAddContactButton.addEventListener('click', function() {
-        addContactContainer.classList.toggle('hidden');
-    });
-
-    // Function to add a new contact name
-    function addContactName(name) {
-        // Create a new div for the contact name
-        const contactNameDiv = document.createElement('div');
-        contactNameDiv.classList.add('contact-name');
-        contactNameDiv.textContent = name;
-
-        // Append the new contact name to the contact details div
-        contactDetails.appendChild(contactNameDiv);
-    }
-
-    // Example usage of addContactName function
+    // Example contacts
     addContactName('Jane Doe');
     addContactName('Alice Smith');
 
-    // Toggle visibility of contact details when clicking on "Contacts" header
-    contactsHeader.addEventListener('click', function() {
-        contactDetails.classList.toggle('expanded');
-    });
+    function setTheme(background, text, buttonBackground, buttonText) {
+        document.documentElement.style.setProperty('--background-color', background);
+        document.documentElement.style.setProperty('--text-color', text);
+        document.documentElement.style.setProperty('--button-background', buttonBackground);
+        document.documentElement.style.setProperty('--button-text', buttonText);
+    }
 
-    // Event listener to add a new contact when the button is clicked
-    addContactButton.addEventListener('click', function() {
-        const newContactName = newContactNameInput.value.trim(); // Get input value and remove leading/trailing spaces
+    function setMonokaiTheme() {
+        setTheme('#272822', '#F8F8F2', '#66D9EF', '#272822');
+    }
+
+    function setSolarizedTheme() {
+        setTheme('#fdf6e3', '#002b36', '#268bd2', '#fdf6e3');
+    }
+
+    function setGruvboxTheme() {
+        setTheme('#282828', '#ebdbb2', '#83a598', '#282828');
+    }
+
+    document.getElementById('monokai').addEventListener('click', setMonokaiTheme);
+    document.getElementById('solarized').addEventListener('click', setSolarizedTheme);
+    document.getElementById('gruvbox').addEventListener('click', setGruvboxTheme);
+
+    function toggleAddContactContainer() {
+        addContactContainer.classList.toggle('hidden');
+    }
+
+    function toggleContactDetails() {
+        contactDetails.classList.toggle('expanded');
+    }
+
+    function addContactName(name) {
+        const contactNameDiv = document.createElement('div');
+        contactNameDiv.classList.add('contact-name');
+        contactNameDiv.textContent = name;
+        contactDetails.appendChild(contactNameDiv);
+    }
+
+    function addNewContact() {
+        const newContactName = newContactNameInput.value.trim();
         if (newContactName !== '') {
             addContactName(newContactName);
-            newContactNameInput.value = ''; // Clear input field after adding the contact
+            newContactNameInput.value = '';
         }
-    });
+    }
 });
 
