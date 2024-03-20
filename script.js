@@ -5,6 +5,52 @@ document.addEventListener("DOMContentLoaded", function() {
     const addContactButton = document.getElementById('addContactButton');
     const addContactContainer = document.getElementById('addContactContainer');
     const revealAddContactButton = document.getElementById('revealAddContact');
+   const chatBox = document.getElementById('chatBox'); // Select the chat box element
+
+    // Initialize message count
+    let messageCount = 0;
+
+    function createMessage(isSelf, text) {
+        // Define constants for message structure elements
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message');
+
+        const messageContentDiv = document.createElement('div');
+        messageContentDiv.classList.add('message-content');
+
+        const lineNumberDiv = document.createElement('div');
+        lineNumberDiv.classList.add('line-number');
+
+        const textDiv = document.createElement('div');
+        textDiv.classList.add('text');
+        textDiv.textContent = text;
+
+        const placeholderDiv = document.createElement('div');
+        placeholderDiv.classList.add('placeholder');
+        placeholderDiv.textContent = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+        // Increment message count and set it as the line number
+        messageCount++;
+        lineNumberDiv.textContent = messageCount;
+
+        // Customize elements according to parameters
+        messageDiv.classList.add(isSelf ? 'self' : 'other');
+        lineNumberDiv.classList.add(isSelf ? 'self' : 'other');
+
+        // Append the elements to each other to form the structure
+        messageContentDiv.appendChild(lineNumberDiv);
+        messageContentDiv.appendChild(textDiv);
+        messageContentDiv.appendChild(placeholderDiv); // Append placeholder div
+        messageDiv.appendChild(messageContentDiv);
+
+        // Append the new message to the chat box before the input-container div
+        chatBox.appendChild(messageDiv);    
+    }
+
+    // Example usage:
+    createMessage(true, "Hello, how are you?"); // Self message
+    createMessage(false, "I'm good, thank you!"); // Other person's message
+    createMessage(true, "What's up?"); // Self message
 
     revealAddContactButton.addEventListener('click', toggleAddContactContainer);
     contactsHeader.addEventListener('click', toggleContactDetails);
@@ -59,5 +105,17 @@ document.addEventListener("DOMContentLoaded", function() {
             newContactNameInput.value = '';
         }
     }
+
+    // Function to handle adding a new message
+    function addNewMessage() {
+        const messageText = document.querySelector('.message-input').value.trim();
+        if (messageText !== '') {
+            createMessage(true, messageText); // Assuming it's a self message, change as needed
+            document.querySelector('.message-input').value = ''; // Clear the message input after adding the message
+        }
+    }
+
+    // Attach event listener to the send button to add a new message
+    document.querySelector('.send-button').addEventListener('click', addNewMessage);
 });
 
