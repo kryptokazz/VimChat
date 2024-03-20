@@ -7,7 +7,7 @@ on:
 
 jobs:
   check-merge-conflict:
-    runs-on: alpine-latest
+    runs-on: alpine
     
     steps:
     - name: Checkout code
@@ -19,7 +19,7 @@ jobs:
       run: git merge-base --is-ancestor HEAD $(git merge-base main HEAD) || exit 1
 
   other-ci-checks:
-    runs-on: ubuntu-latest
+    runs-on: alpine
 
     steps:
     - name: Checkout code
