@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const newContactNameInput = document.getElementById('newContactName');
     const addContactButton = document.getElementById('addContactButton');
     const addContactContainer = document.getElementById('addContactContainer');
-    const revealAddContactButton = document.getElementById('revealAddContact');
+    const revealAddContactButton = document.querySelector('.edit-button');
    const chatBox = document.getElementById('chatBox'); // Select the chat box element
 
     // Initialize message count
@@ -118,4 +118,3 @@ document.addEventListener("DOMContentLoaded", function() {
     // Attach event listener to the send button to add a new message
     document.querySelector('.send-button').addEventListener('click', addNewMessage);
 });
-
