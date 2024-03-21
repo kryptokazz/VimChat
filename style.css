@@ -107,6 +107,28 @@ body {
 }
 
 
+.contact-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-name {
+    margin-bottom: 10px;
+}
+
+.edit-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #61AFEF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
 
 .main {
     flex: 3;
@@ -198,5 +220,3 @@ body {
 .color-button:hover {
     background-color: #3E90F3;
 }
-
-
