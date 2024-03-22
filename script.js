@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const addContactButton = document.getElementById('addContactButton');
     const addContactContainer = document.getElementById('addContactContainer');
     const revealAddContactButton = document.querySelector('.edit-button');
-   const chatBox = document.getElementById('chatBox'); // Select the chat box element
+    const chatBox = document.getElementById('chatBox'); // Select the chat box element
 
     // Initialize message count
     let messageCount = 0;
@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function toggleAddContactContainer() {
         addContactContainer.classList.toggle('hidden');
+        document.body.classList.toggle('blurred');
     }
 
     function toggleContactDetails() {
